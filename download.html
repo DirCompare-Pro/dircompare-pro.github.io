@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Download DirectoryCompare Pro v1.0 - Professional directory comparison tool for Windows.">
+    <meta name="description" content="Download DirectoryCompare Pro v1.01 - Professional directory comparison tool for Windows and Linux.">
     <title>Download - DirectoryCompare Pro</title>
     <style>
         * {
@@ -217,7 +217,7 @@
 
     <div class="header">
         <h1>Download DirectoryCompare Pro</h1>
-        <p>Version 1.0 - Initial Release (December 25, 2025)</p>
+        <p>Version 1.01 - Static Build + Linux Support (December 28, 2025)</p>
     </div>
 
     <div class="container">
@@ -225,40 +225,61 @@
             <h2>Windows Download</h2>
 
             <div class="download-card">
-                <h3>Windows Package</h3>
-                <p>No installation required - extract and run. Includes optional batch installer for Start Menu + context menu integration.</p>
+                <h3>Windows Package (Fully Static)</h3>
+                <p>No installation required - extract and run. <strong>Zero DLL dependencies</strong> - fully static build. Includes optional batch installer for Start Menu + context menu integration.</p>
 
                 <div class="file-info">
-                    <strong>File:</strong> DirectoryComparePro-v1.0-Windows-Portable.zip<br>
-                    <strong>Size:</strong> 5.4 MB (compressed)<br>
+                    <strong>File:</strong> DirectoryComparePro-v1.01-Windows-STATIC.zip<br>
+                    <strong>Size:</strong> 6.4 MB (compressed) | 15.4 MB (executable)<br>
                     <strong>Platform:</strong> Windows 10/11 (64-bit)<br>
-                    <strong>Contents:</strong> Executable + Documentation + Optional Installer
+                    <strong>Contents:</strong> Standalone Executable + Documentation + Optional Installer<br>
+                    <strong>Dependencies:</strong> None - all libraries statically linked
                 </div>
 
-                <a href="https://github.com/DirCompare-Pro/DirectoryComparePro/releases/download/v1.0/DirectoryComparePro-v1.0-Windows-Portable.zip" class="download-btn">Download v1.0 for Windows</a>
+                <a href="https://github.com/DirCompare-Pro/DirectoryComparePro/releases/download/v1.01/DirectoryComparePro-v1.01-Windows-STATIC.zip" class="download-btn">Download v1.01 for Windows</a>
 
                 <div class="checksum">
                     <div class="checksum-label">SHA-256 Checksum:</div>
-                    <div>8D56D12746E31C663F7027902C7A41090B9EC2490B02A1CB94A178A1EB9D15A7</div>
+                    <div>TBD - Generate after final upload</div>
                 </div>
             </div>
+        </div>
 
-            <div class="note">
-                <strong>Note:</strong> Linux builds are coming soon! 100% feature parity has been achieved - builds will be released separately.
+        <div class="section">
+            <h2>Linux Download</h2>
+
+            <div class="download-card">
+                <h3>Linux Package (Ubuntu/Debian)</h3>
+                <p>Tested on Ubuntu 22.04+, Debian, and Kali Linux. Requires standard system libraries (installed via apt).</p>
+
+                <div class="file-info">
+                    <strong>File:</strong> DirectoryComparePro-v1.01-Linux.tar.gz<br>
+                    <strong>Size:</strong> 1.3 MB (compressed) | 3.4 MB (executable)<br>
+                    <strong>Platform:</strong> Linux x86_64 (64-bit)<br>
+                    <strong>Contents:</strong> Executable + Documentation + Install/Uninstall Scripts<br>
+                    <strong>Dependencies:</strong> libwxgtk3.2, libgit2, libarchive, libssl, libcurl
+                </div>
+
+                <a href="https://github.com/DirCompare-Pro/DirectoryComparePro/releases/download/v1.01/DirectoryComparePro-v1.01-Linux.tar.gz" class="download-btn">Download v1.01 for Linux</a>
+
+                <div class="checksum">
+                    <div class="checksum-label">SHA-256 Checksum:</div>
+                    <div>TBD - Generate after final upload</div>
+                </div>
             </div>
         </div>
 
         <div class="section">
             <h2>Installation Instructions</h2>
 
-            <h3 style="color: #667eea; margin-bottom: 15px;">Quick Start</h3>
+            <h3 style="color: #667eea; margin-bottom: 15px;">Windows - Quick Start</h3>
             <ol>
-                <li>Download <code>DirectoryComparePro-v1.0-Windows-Portable.zip</code></li>
+                <li>Download <code>DirectoryComparePro-v1.01-Windows-STATIC.zip</code></li>
                 <li>Extract to any folder (e.g., <code>C:\DirectoryComparePro</code> or <code>C:\Program Files\DirectoryComparePro</code>)</li>
-                <li>Run <code>DirectoryComparePro.exe</code> - works immediately!</li>
+                <li>Run <code>DirectoryComparePro.exe</code> - works immediately with zero dependencies!</li>
             </ol>
 
-            <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Optional Installation (Context Menu + Shortcuts)</h3>
+            <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Windows - Optional Installation (Context Menu + Shortcuts)</h3>
             <ol>
                 <li>After extracting, right-click <code>install.bat</code></li>
                 <li>Select "Run as administrator"</li>
@@ -272,13 +293,46 @@
                 <li>To uninstall, run <code>uninstall.bat</code> as administrator</li>
             </ol>
 
+            <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Linux - Installation</h3>
+            <ol>
+                <li>Download <code>DirectoryComparePro-v1.01-Linux.tar.gz</code></li>
+                <li>Extract the archive:
+                    <pre style="margin-top: 10px;">tar -xzf DirectoryComparePro-v1.01-Linux.tar.gz
+cd DirectoryComparePro-v1.01-Linux</pre>
+                </li>
+                <li>Install required dependencies (Ubuntu/Debian):
+                    <pre>sudo apt install libwxgtk3.2-1 libgit2-1.7 libarchive13 libssl3 libcurl4</pre>
+                </li>
+                <li>Run directly:
+                    <pre>./DirectoryComparePro</pre>
+                </li>
+                <li><strong>Optional:</strong> Install system-wide:
+                    <pre>sudo ./install.sh</pre>
+                    This adds the program to <code>/usr/local/bin</code> and creates a desktop entry.
+                </li>
+            </ol>
+
             <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">System Requirements</h3>
-            <ul>
-                <li><strong>OS:</strong> Windows 10/11 (64-bit)</li>
-                <li><strong>RAM:</strong> 4 GB minimum (8 GB recommended)</li>
-                <li><strong>Disk:</strong> 50 MB free space</li>
-                <li><strong>Dependencies:</strong> None - fully static binary</li>
-            </ul>
+            <div class="grid-2">
+                <div>
+                    <h4 style="color: #764ba2; margin-bottom: 10px;">Windows</h4>
+                    <ul>
+                        <li><strong>OS:</strong> Windows 10/11 (64-bit)</li>
+                        <li><strong>RAM:</strong> 2 GB minimum (4 GB recommended)</li>
+                        <li><strong>Disk:</strong> 20 MB free space</li>
+                        <li><strong>Dependencies:</strong> None - fully static binary</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #764ba2; margin-bottom: 10px;">Linux</h4>
+                    <ul>
+                        <li><strong>OS:</strong> Ubuntu 22.04+, Debian, Kali (64-bit)</li>
+                        <li><strong>RAM:</strong> 2 GB minimum (4 GB recommended)</li>
+                        <li><strong>Disk:</strong> 20 MB free space</li>
+                        <li><strong>Dependencies:</strong> libwxgtk3.2, libgit2, libarchive, libssl, libcurl</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="section">
@@ -286,15 +340,22 @@
             <p>Always verify downloaded files using SHA-256 checksums to ensure they haven't been tampered with.</p>
 
             <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Windows PowerShell</h3>
-            <pre>Get-FileHash -Algorithm SHA256 DirectoryComparePro-v1.0-Windows-Portable.zip</pre>
+            <pre>Get-FileHash -Algorithm SHA256 DirectoryComparePro-v1.01-Windows-STATIC.zip</pre>
 
             <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Windows Command Prompt</h3>
-            <pre>certutil -hashfile DirectoryComparePro-v1.0-Windows-Portable.zip SHA256</pre>
+            <pre>certutil -hashfile DirectoryComparePro-v1.01-Windows-STATIC.zip SHA256</pre>
 
-            <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Expected Checksum</h3>
+            <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Linux/macOS</h3>
+            <pre>sha256sum DirectoryComparePro-v1.01-Linux.tar.gz</pre>
+
+            <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Expected Checksums</h3>
             <div class="checksum">
-                <div class="checksum-label">DirectoryComparePro-v1.0-Windows-Portable.zip:</div>
-                <div>8D56D12746E31C663F7027902C7A41090B9EC2490B02A1CB94A178A1EB9D15A7</div>
+                <div class="checksum-label">DirectoryComparePro-v1.01-Windows-STATIC.zip:</div>
+                <div>TBD - Generate after final upload</div>
+            </div>
+            <div class="checksum" style="margin-top: 10px;">
+                <div class="checksum-label">DirectoryComparePro-v1.01-Linux.tar.gz:</div>
+                <div>TBD - Generate after final upload</div>
             </div>
 
             <p style="margin-top: 20px;">
@@ -305,20 +366,35 @@
         <div class="section">
             <h2>What's Included</h2>
 
-            <h3 style="color: #667eea; margin-bottom: 15px;">DirectoryComparePro-v1.0-Windows-Portable.zip Contains:</h3>
-            <ul>
-                <li><strong>DirectoryComparePro.exe</strong> - Main application (14.7 MB)</li>
-                <li><strong>README.md</strong> - Full release notes and documentation</li>
-                <li><strong>CHANGELOG.md</strong> - Complete version history</li>
-                <li><strong>VERSION</strong> - Version identifier file</li>
-                <li><strong>install.bat</strong> - Optional installer for context menu integration (requires admin)</li>
-                <li><strong>uninstall.bat</strong> - Uninstaller for removing installed components</li>
-            </ul>
+            <div class="grid-2">
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Windows Package Contains:</h3>
+                    <ul>
+                        <li><strong>DirectoryComparePro.exe</strong> - Main application (15.4 MB, fully static)</li>
+                        <li><strong>README.md</strong> - Full release notes and documentation</li>
+                        <li><strong>CHANGELOG.md</strong> - Complete version history</li>
+                        <li><strong>VERSION</strong> - Version identifier file</li>
+                        <li><strong>install.bat</strong> - Optional installer for context menu integration</li>
+                        <li><strong>uninstall.bat</strong> - Uninstaller for removing installed components</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Linux Package Contains:</h3>
+                    <ul>
+                        <li><strong>DirectoryComparePro</strong> - Main application (3.4 MB binary)</li>
+                        <li><strong>README.md</strong> - Full release notes and documentation</li>
+                        <li><strong>CHANGELOG.md</strong> - Complete version history</li>
+                        <li><strong>VERSION</strong> - Version identifier file</li>
+                        <li><strong>install.sh</strong> - Optional system-wide installer</li>
+                        <li><strong>uninstall.sh</strong> - Uninstaller script</li>
+                    </ul>
+                </div>
+            </div>
 
-            <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Features Included:</h3>
+            <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Features Included (100% Parity on Windows & Linux):</h3>
             <ul>
                 <li>N-way directory comparison (2, 3, 4+ sources)</li>
-                <li>Git/GitHub integration</li>
+                <li>Git/GitHub integration (compare without checkout/cloning)</li>
                 <li>FTP/FTPS/SFTP support</li>
                 <li>Archive comparison (ZIP, TAR, 7Z, RAR, ISO, CAB, GZ, BZ2, XZ)</li>
                 <li>Similarity search (text and image)</li>
@@ -327,12 +403,24 @@
                 <li>Smart folder alignment</li>
                 <li>Keyboard shortcuts</li>
                 <li>Bookmark management</li>
+                <li>Enterprise RSA-2048 licensing (cross-platform keys)</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Release Notes</h2>
-            <h3 style="color: #667eea; margin-bottom: 15px;">Version 1.0.0 - December 25, 2025</h3>
+
+            <h3 style="color: #667eea; margin-bottom: 15px;">Version 1.01 - December 28, 2025</h3>
+            <p><strong>Static Build + Linux Support</strong></p>
+            <ul>
+                <li><strong>Fully static Windows build</strong> - Zero DLL dependencies, single 15.4 MB executable</li>
+                <li><strong>Official Linux support</strong> - Ubuntu/Debian/Kali packages with full feature parity</li>
+                <li><strong>Cross-platform licensing</strong> - License keys work on both Windows and Linux</li>
+                <li><strong>Enhanced security</strong> - RSA-2048 machine-bound licensing with additional registry backups</li>
+                <li><strong>Bug fixes</strong> - Fixed type compatibility issues for cross-platform builds</li>
+            </ul>
+
+            <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Version 1.0.0 - December 25, 2025</h3>
             <p><strong>Initial public release</strong></p>
             <ul>
                 <li>N-way comparison engine (compare 2+ sources simultaneously)</li>
@@ -359,8 +447,8 @@
 
     <div class="footer">
         <div class="container">
-            <p><strong>DirectoryCompare Pro v1.0</strong></p>
-            <p>Released December 25, 2025</p>
+            <p><strong>DirectoryCompare Pro v1.01</strong></p>
+            <p>Released December 28, 2025</p>
             <p style="margin-top: 15px;">
                 <a href="index.html">Home</a> |
                 <a href="download.html">Download</a> |
